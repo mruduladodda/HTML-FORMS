@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>registration form</h2>
-<form action="/register" method="post">
+<form  id="registrationform" action="/register" method="post">
     <label>FULL NAME:</label>
     <input type="text" id="fullname" name="fullname" required>
     <br></br>
@@ -18,7 +18,13 @@
     <input type="password" id="password" name="password" required>
 <br></br>
 <input type="submit" value="Register">
-<input type="reset" value="Reset">
+<button type="button" onclick="resetform()">Reset</button>
 </form>
+<script>
+    function resetForm(){
+        document.getElementById(
+            "registrationform").reset();
+    }
+</script>
 </body>
 </html> 

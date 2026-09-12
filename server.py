@@ -23,6 +23,9 @@ def create_database():
 
 @app.route("/")
 def home():
+    return render_template("navbar.html")
+@app.route("/register", methods=["GET"])
+def register_page():
     return render_template("reg2.html")
 
 
